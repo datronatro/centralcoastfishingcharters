@@ -107,7 +107,7 @@ const SpecialtySection = ({ onImageClick }: { onImageClick: (src: string) => voi
         <strong>2. White Sea Bass:</strong> $400/person, 3 people max - Only offered July - mid-October if squid are spawning, squid lights and sleeping areas provided.
       </p>
       <p className="text-lg text-primary mb-6">
-        <strong>3. Bluewater Package:</strong> $600/person - Run offshore to chase some of the tuna species that frequent our coasts such as bluefin, albacore, and bonita. If the conditions don't permit we will fish inshore as a fallback.
+        <strong>3. Bluewater Package:</strong> $600/person - Run offshore to chase some of the tuna species that frequent our coasts such as bluefin, albacore, and bonita. If the conditions do not permit we will fish inshore as a fallback.
       </p>
       <div className="flex flex-wrap items-center justify-between gap-3 md:gap-0">
         <div className="bg-white rounded-lg shadow-sm p-3">
@@ -140,7 +140,7 @@ export default function Packages() {
         { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512125/rockfishlingcod1_zz597e.avif", alt: "Rockfish fishing" },
         { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512123/rockfishlingcod3_k7kiwu.avif", alt: "Lingcod fishing" }
       ],
-      description: "Target a variety of rockfish species, ranging from Reds and Coppers, to Gophers and Treefish. Have a shot at hooking into the notorious reef-bully, the Lingcod as well. Guaranteed catch, even on slow days, and come home with all the necessities for a fish fry! We'll even provide some of our favorite recipes for you to try.",
+      description: "Target a variety of rockfish species, ranging from Reds and Coppers, to Gophers and Treefish. Have a shot at hooking into the notorious reef-bully, the Lingcod as well. Guaranteed catch, even on slow days, and come home with all the necessities for a fish fry! We will even provide some of our favorite recipes for you to try.",
       price: "250",
       privatePrice: "1000"
     },
@@ -170,7 +170,7 @@ export default function Packages() {
         { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512127/kingsalmon1_evp9t5.avif", alt: "King Salmon" },
         { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512126/kingsalmon3_dqfv75.avif", alt: "Salmon fishing" }
       ],
-      description: "We have seen some nice king salmon runs from May - July in the recent years. Because these fish are so sought-after and require special gear to target, it's one of our more expensive packages. However, pound-for-pound, there's nothing that swims near-shore on the Central Coast that comes close to the fight a large salmon puts up (or tastes as delicious).",
+      description: "We have seen some nice king salmon runs from May - July in the recent years. Because these fish are so sought-after and require special gear to target, it is one of our more expensive packages. However, pound-for-pound, there is nothing that swims near-shore on the Central Coast that comes close to the fight a large salmon puts up (or tastes as delicious).",
       price: "300",
       privatePrice: "1200"
     }
@@ -188,7 +188,7 @@ export default function Packages() {
             <div className="mb-10">
               <div className="prose max-w-none">
                 <p className="text-lg text-primary mb-6">
-                  Target the Prized Fish of The Central Coast. Choose from one of our packages below to determine what fish you want to target during your trip. We'll provide seasonal recommendations and do our best to put you on your trophy. You can either book a single spot on a trip or the entire boat for a private charter. Open party trips must have at least 3 seats booked to run. Fuel surcharges for San Simeon and Big Sur are $50 and $75 per person, respectively.
+                  Target the Prized Fish of The Central Coast. Choose from one of our packages below to determine what fish you want to target during your trip. We will provide seasonal recommendations and do our best to put you on your trophy. You can either book a single spot on a trip or the entire boat for a private charter. Open party trips must have at least 3 seats booked to run. Fuel surcharges for San Simeon and Big Sur are $50 and $75 per person, respectively.
                 </p>
               </div>
             </div>
