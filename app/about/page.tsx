@@ -108,7 +108,7 @@ export default function About() {
               <div className="w-full md:w-2/3 order-1 md:order-2">
                 <h3 className="text-xl font-semibold text-primary mb-3">Captain Rich</h3>
                 <p className="text-lg text-gray-700">
-                  Born in Austin, TX, Rich started fishing when he was 4 years old. When he moved to the Central Coast to attend Cal Poly in 2016, he instantly fell in love with the fishing that the Pacific Ocean has to offer. Rich owns his own boat that he has been fishing off of for the last 5 years and carries 10 years of saltwater fishing experience under his belt. Rich has a passion for the ocean that few can rival—he's an avid surfer, kayaker, boater, conservationist, and fisherman. His favorite species to target are salmon and white sea bass!
+                  Born in Austin, TX, Rich started fishing when he was 4 years old. When he moved to the Central Coast to attend Cal Poly in 2016, he instantly fell in love with the fishing that the Pacific Ocean has to offer. Rich owns his own boat that he has been fishing off of for the last 5 years and carries 10 years of saltwater fishing experience under his belt. Rich has a passion for the ocean that few can rival—he&apos;s an avid surfer, kayaker, boater, conservationist, and fisherman. His favorite species to target are salmon and white sea bass!
                 </p>
               </div>
             </div>

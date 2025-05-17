@@ -132,7 +132,7 @@ export default function Packages() {
         { src: "/packages/rockfishlingcod1.avif", alt: "Rockfish fishing" },
         { src: "/packages/rockfishlingcod3.avif", alt: "Lingcod fishing" }
       ],
-      description: "Target a variety of rockfish species, ranging from Reds and Coppers, to Gophers and Treefish. Have a shot at hooking into the notorious reef-bully, the Lingcod as well. Guaranteed catch, even on slow days, and come home with all the necessities for a fish fry! We'll even provide some of our favorite recipes for you to try.",
+      description: "Target a variety of rockfish species, ranging from Reds and Coppers, to Gophers and Treefish. Have a shot at hooking into the notorious reef-bully, the Lingcod as well. Guaranteed catch, even on slow days, and come home with all the necessities for a fish fry! We&apos;ll even provide some of our favorite recipes for you to try.",
       price: "250",
       privatePrice: "1000"
     },

@@ -48,7 +48,7 @@ export default function Landing() {
         <div className="flex-grow flex flex-col justify-center items-start p-4 md:p-6">
           <div className="max-w-full md:max-w-3xl">
             <h1 className="text-3xl md:text-5xl font-bold text-white mb-4">
-              The best private fishing experience on California's central coast
+              The best private fishing experience on California&apos;s central coast
             </h1>
             <div className="mt-4 md:mt-6">
               <Link href="https://centralcoastfishingchartersinc.schedulista.com/" target="_blank" rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-gray-200 transition">
