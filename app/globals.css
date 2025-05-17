@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #103F67;
+  --primary-dark: #092c4a;
+  --primary-light: #1a5d92;
+}
+
+body {
+  color: rgb(42, 42, 42);
+  background: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
