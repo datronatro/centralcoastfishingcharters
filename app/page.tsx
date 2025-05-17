@@ -18,7 +18,7 @@ export default function Landing() {
           playsInline
           className="hidden md:block h-full w-full object-cover"
         >
-          <source src="/videos/desktopbackground.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/hypertheory/video/upload/v1747509436/DesktopBackground_cg5ndb.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
         <video
@@ -28,7 +28,7 @@ export default function Landing() {
           playsInline
           className="md:hidden h-full w-full object-cover"
         >
-          <source src="/videos/mobilebackground.mp4" type="video/mp4" />
+          <source src="https://res.cloudinary.com/hypertheory/video/upload/v1747509816/MobileBackground_l4mvqi.mp4" type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
