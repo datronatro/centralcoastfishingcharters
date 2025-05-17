@@ -115,7 +115,7 @@ export default function About() {
               <div className="w-full md:w-2/3 order-1 md:order-2">
                 <h3 className="text-xl font-semibold text-primary mb-3">Captain Rich</h3>
                 <p className="text-lg text-gray-700">
-                  Born in Austin, TX, Rich started fishing when he was 4 years old. When he moved to the Central Coast to attend Cal Poly in 2016, he instantly fell in love with the fishing that the Pacific Ocean has to offer. Rich owns his own boat that he has been fishing off of for the last 5 years and carries 10 years of saltwater fishing experience under his belt. Rich has a passion for the ocean that few can rival—he's an avid surfer, kayaker, boater, conservationist, and fisherman. His favorite species to target are salmon and white sea bass!
+                  Born in Austin, TX, Rich started fishing when he was 4 years old. When he moved to the Central Coast to attend Cal Poly in 2016, he instantly fell in love with the fishing that the Pacific Ocean has to offer. Rich owns his own boat that he has been fishing off of for the last 5 years and carries 10 years of saltwater fishing experience under his belt. Rich has a passion for the ocean that few can rival—he is an avid surfer, kayaker, boater, conservationist, and fisherman. His favorite species to target are salmon and white sea bass!
                 </p>
               </div>
             </div>
@@ -135,7 +135,7 @@ export default function About() {
               <div className="w-full md:w-2/3 order-1 md:order-2">
                 <h3 className="text-xl font-semibold text-primary mb-3">Captain John</h3>
                 <p className="text-lg text-gray-700">
-                  Born in the Santa Cruz mountains, John is a true Central Coast native. He moved to Cambria, CA when he was 1 and started fishing out of Leffingwell Cove with his Dad's guidance at the age of 9. By age 18, John bought this first ocean boat and has been fishing off the Central Coast for over 30 years now. He is scuba certified and has experience free diving for abalone in Northern California. Aside from being on the ocean, John shares his passion for the outdoors with others by guiding pig and deer hunts. He is married with two little girls and his favorite species to target is salmon.
+                  Born in the Santa Cruz mountains, John is a true Central Coast native. He moved to Cambria, CA when he was 1 and started fishing out of Leffingwell Cove with the guidance of his dad at the age of 9. By age 18, John bought this first ocean boat and has been fishing off the Central Coast for over 30 years now. He is scuba certified and has experience free diving for abalone in Northern California. Aside from being on the ocean, John shares his passion for the outdoors with others by guiding pig and deer hunts. He is married with two little girls and his favorite species to target is salmon.
                 </p>
               </div>
             </div>
@@ -145,7 +145,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl font-bold text-primary mb-6">Find Us</h2>
             <p className="text-lg text-gray-700 mb-6">
-              We're conveniently located at <strong>1213 Embarcadero, Morro Bay, CA 93442</strong>. 
+              We are conveniently located at <strong>1213 Embarcadero, Morro Bay, CA 93442</strong>. 
               Look for the FV GHOSTRIDER at the Embarcadero dock.
             </p>
             
