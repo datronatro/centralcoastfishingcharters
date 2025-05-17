@@ -46,7 +46,7 @@ export default function About() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
                 <Image
-                  src="/about/about2.avif"
+                  src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about2_y0p68k.avif"
                   alt="Fishing experience"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -54,7 +54,7 @@ export default function About() {
               </div>
               <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
                 <Image
-                  src="/about/about3.avif"
+                  src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about3_l2zdj2.avif"
                   alt="Fishing in Morro Bay"
                   fill
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -70,7 +70,7 @@ export default function About() {
               <div className="w-full md:w-1/2 order-2 md:order-1">
                 <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
                   <Image
-                    src="/about/theboat.avif"
+                    src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about1_r8zpby.avif"
                     alt="FV GHOSTRIDER"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -98,7 +98,7 @@ export default function About() {
               <div className="w-full md:w-1/3 order-2 md:order-1">
                 <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group">
                   <Image
-                    src="/about/captaindick.avif"
+                    src="https://res.cloudinary.com/hypertheory/image/upload/v1747510582/about4_od36co.avif"
                     alt="Captain Rich"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
@@ -118,7 +118,7 @@ export default function About() {
               <div className="w-full md:w-1/3 order-2 md:order-1">
                 <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group">
                   <Image
-                    src="/about/captainjohn.avif"
+                    src="https://res.cloudinary.com/hypertheory/image/upload/v1747510581/about5_hvg4u6.avif"
                     alt="Captain John"
                     fill
                     className="object-cover transition-transform duration-300 group-hover:scale-105"
