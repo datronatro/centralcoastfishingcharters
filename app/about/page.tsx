@@ -128,7 +128,7 @@ export default function About() {
               <div className="w-full md:w-2/3 order-1 md:order-2">
                 <h3 className="text-xl font-semibold text-primary mb-3">Captain John</h3>
                 <p className="text-lg text-gray-700">
-                  Born in the Santa Cruz mountains, John is a true Central Coast native. He moved to Cambria, CA when he was 1 and started fishing out of Leffingwell Cove with his Dad at the age of 9. By age 18, John bought this first ocean boat and has been fishing off the Central Coast for over 30 years now. He is scuba certified and has experience free diving for abalone in Northern California. Aside from being on the ocean, John shares his passion for the outdoors with others by guiding pig and deer hunts. He is married with two little girls and his favorite species to target is salmon.
+                  Born in the Santa Cruz mountains, John is a true Central Coast native. He moved to Cambria, CA when he was 1 and started fishing out of Leffingwell Cove with his Dad&apos;s guidance at the age of 9. By age 18, John bought this first ocean boat and has been fishing off the Central Coast for over 30 years now. He is scuba certified and has experience free diving for abalone in Northern California. Aside from being on the ocean, John shares his passion for the outdoors with others by guiding pig and deer hunts. He is married with two little girls and his favorite species to target is salmon.
                 </p>
               </div>
             </div>
@@ -138,7 +138,7 @@ export default function About() {
           <div>
             <h2 className="text-2xl font-bold text-primary mb-6">Find Us</h2>
             <p className="text-lg text-gray-700 mb-6">
-              We're conveniently located at <strong>1213 Embarcadero, Morro Bay, CA 93442</strong>. 
+              We&apos;re conveniently located at <strong>1213 Embarcadero, Morro Bay, CA 93442</strong>. 
               Look for the FV GHOSTRIDER at the Embarcadero dock.
             </p>
             
