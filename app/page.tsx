@@ -51,11 +51,14 @@ export default function Landing() {
               The best private fishing experience on California&apos;s central coast
             </h1>
             <div className="mt-4 md:mt-6">
-              <Link href="https://centralcoastfishingchartersinc.schedulista.com/" target="_blank" rel="noopener noreferrer" className="text-white flex items-center gap-2 hover:text-gray-200 transition">
-                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                  <Anchor size={16} className="text-white" />
+              <Link 
+                href="/packages" 
+                className="text-white group flex items-center gap-2 hover:text-gray-200 transition-all duration-300"
+              >
+                <span className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center transition-all duration-300 group-hover:bg-white/30 group-hover:scale-110">
+                  <Anchor size={16} className="text-white transition-all duration-300 group-hover:scale-110" />
                 </span>
-                <span className="text-white">Book your fishing adventure</span>
+                <span className="text-white">Plan your next adventure</span>
               </Link>
             </div>
           </div>
