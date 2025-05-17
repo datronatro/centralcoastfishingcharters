@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import PageLayout from '@/app/components/PageLayout';
+import ImageLightbox from '@/app/components/ImageLightbox';
+import useLightbox from '@/app/hooks/useLightbox';
 
 interface PackageImage {
   src: string;
@@ -14,22 +18,23 @@ interface PackageSectionProps {
   description: string;
   price: string;
   privatePrice: string;
+  onImageClick: (src: string) => void;
 }
 
-interface PackageData extends PackageSectionProps {}
+interface PackageData extends Omit<PackageSectionProps, 'onImageClick'> {}
 
-const PackageSection = ({ title, images, description, price, privatePrice }: PackageSectionProps) => (
+const PackageSection = ({ title, images, description, price, privatePrice, onImageClick }: PackageSectionProps) => (
   <div>
     <h2 className="text-2xl font-bold text-primary mb-6">{title}</h2>
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
       {images.map((img: PackageImage, i: number) => (
-        <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+        <div key={i} className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => onImageClick(img.src)}>
           <Image
             src={img.src}
             alt={img.alt}
             fill
-            className="object-cover"
+            className="object-cover transition-transform duration-300 group-hover:scale-105"
           />
         </div>
       ))}
@@ -68,25 +73,25 @@ const PackageSection = ({ title, images, description, price, privatePrice }: Pac
   </div>
 );
 
-const SpecialtySection = () => (
+const SpecialtySection = ({ onImageClick }: { onImageClick: (src: string) => void }) => (
   <div>
     <h2 className="text-2xl font-bold text-primary mb-6">Specialty Trips</h2>
     
     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+      <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => onImageClick("https://res.cloudinary.com/hypertheory/image/upload/v1747512122/special1_z6k8dl.avif")}>
         <Image
-          src="/packages/special1.avif"
+          src="https://res.cloudinary.com/hypertheory/image/upload/v1747512122/special1_z6k8dl.avif"
           alt="Jurassic Park Package"
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
-      <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg">
+      <div className="relative aspect-[4/3] rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => onImageClick("https://res.cloudinary.com/hypertheory/image/upload/v1747512121/special2_qrix9l.avif")}>
         <Image
-          src="/packages/special2.avif"
+          src="https://res.cloudinary.com/hypertheory/image/upload/v1747512121/special2_qrix9l.avif"
           alt="White Sea Bass Package"
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 group-hover:scale-105"
         />
       </div>
     </div>
@@ -125,12 +130,15 @@ const SpecialtySection = () => (
 );
 
 export default function Packages() {
+  // Use our custom lightbox hook
+  const { selectedImage, openLightbox, closeLightbox } = useLightbox();
+
   const packageData: PackageData[] = [
     {
       title: "Rockfish Lingcod",
       images: [
-        { src: "/packages/rockfishlingcod1.avif", alt: "Rockfish fishing" },
-        { src: "/packages/rockfishlingcod3.avif", alt: "Lingcod fishing" }
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512125/rockfishlingcod1_zz597e.avif", alt: "Rockfish fishing" },
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512123/rockfishlingcod3_k7kiwu.avif", alt: "Lingcod fishing" }
       ],
       description: "Target a variety of rockfish species, ranging from Reds and Coppers, to Gophers and Treefish. Have a shot at hooking into the notorious reef-bully, the Lingcod as well. Guaranteed catch, even on slow days, and come home with all the necessities for a fish fry! We&apos;ll even provide some of our favorite recipes for you to try.",
       price: "250",
@@ -139,8 +147,8 @@ export default function Packages() {
     {
       title: "Rockfish Halibut",
       images: [
-        { src: "/packages/halibut1.avif", alt: "California Halibut" },
-        { src: "/packages/halibut2.avif", alt: "Halibut fishing" }
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512132/halibut1_dmzyry.avif", alt: "California Halibut" },
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512132/halibut2_n9jbov.avif", alt: "Halibut fishing" }
       ],
       description: "Rockfish and lingcod are cool but are nothing compared to the elusive California Halibut. These flatfish yield some of the best white meat that swims in the ocean and are fair game to target year-round. Not to mention, they tend to get quite large (some over 30 pounds)! Exclusively target halibut—or target rockfish and lings for half the day, then try for a chance of a halibut depending on their peak feeding times.",
       price: "300",
@@ -149,8 +157,8 @@ export default function Packages() {
     {
       title: "Halibut Seabass",
       images: [
-        { src: "/packages/halibutseabass1.avif", alt: "Halibut and Seabass" },
-        { src: "/packages/halibutseabass2.avif", alt: "Seabass fishing" }
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512131/halibutseabass1_qzaeyq.avif", alt: "Halibut and Seabass" },
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512130/halibutseabass2_j7xt1z.avif", alt: "Seabass fishing" }
       ],
       description: "June - September is when we start seeing some larger halibut and white sea bass come through. This package is intended for anglers who have caught their fair share of rockfish and want a shot at a trophy halibut or white sea bass. Come out to try and put one of these monsters on the deck.",
       price: "300", 
@@ -159,8 +167,8 @@ export default function Packages() {
     {
       title: "Salmon",
       images: [
-        { src: "/packages/kingsalmon1.avif", alt: "King Salmon" },
-        { src: "/packages/kingsalmon2.avif", alt: "Salmon fishing" }
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512127/kingsalmon1_evp9t5.avif", alt: "King Salmon" },
+        { src: "https://res.cloudinary.com/hypertheory/image/upload/v1747512126/kingsalmon3_dqfv75.avif", alt: "Salmon fishing" }
       ],
       description: "We have seen some nice king salmon runs from May - July in the recent years. Because these fish are so sought-after and require special gear to target, it&apos;s one of our more expensive packages. However, pound-for-pound, there&apos;s nothing that swims near-shore on the Central Coast that comes close to the fight a large salmon puts up (or tastes as delicious).",
       price: "300",
@@ -187,12 +195,18 @@ export default function Packages() {
           </div>
           
           {packageData.map((pkg, index) => (
-            <PackageSection key={index} {...pkg} />
+            <PackageSection key={index} {...pkg} onImageClick={openLightbox} />
           ))}
           
-          <SpecialtySection />
+          <SpecialtySection onImageClick={openLightbox} />
         </div>
       </div>
+
+      {/* Use our reusable ImageLightbox component */}
+      <ImageLightbox 
+        selectedImage={selectedImage} 
+        onClose={closeLightbox} 
+      />
     </PageLayout>
   );
 } 

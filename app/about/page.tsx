@@ -1,7 +1,11 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import PageLayout from '@/app/components/PageLayout';
 import dynamic from 'next/dynamic';
+import ImageLightbox from '@/app/components/ImageLightbox';
+import useLightbox from '@/app/hooks/useLightbox';
 
 // Dynamically import the map component to prevent SSR issues
 const LocationMap = dynamic(() => import('../components/LocationMap'), {
@@ -14,6 +18,9 @@ const LocationMap = dynamic(() => import('../components/LocationMap'), {
 });
 
 export default function About() {
+  // Use our custom lightbox hook
+  const { selectedImage, openLightbox, closeLightbox } = useLightbox();
+
   return (
     <PageLayout>
       {/* Main Content with Padding to Avoid Nav Overlap */}
@@ -44,7 +51,7 @@ export default function About() {
             
             {/* Image Gallery */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
+              <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => openLightbox("https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about2_y0p68k.avif")}>
                 <Image
                   src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about2_y0p68k.avif"
                   alt="Fishing experience"
@@ -52,7 +59,7 @@ export default function About() {
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
-              <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
+              <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => openLightbox("https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about3_l2zdj2.avif")}>
                 <Image
                   src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about3_l2zdj2.avif"
                   alt="Fishing in Morro Bay"
@@ -68,7 +75,7 @@ export default function About() {
             <h2 className="text-2xl font-bold text-primary mb-6">Our Boat</h2>
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/2 order-2 md:order-1">
-                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group">
+                <div className="aspect-[4/3] relative rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => openLightbox("https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about1_r8zpby.avif")}>
                   <Image
                     src="https://res.cloudinary.com/hypertheory/image/upload/v1747510583/about1_r8zpby.avif"
                     alt="FV GHOSTRIDER"
@@ -96,7 +103,7 @@ export default function About() {
             {/* Captain Rich */}
             <div className="flex flex-col md:flex-row gap-6 items-center mb-12">
               <div className="w-full md:w-1/3 order-2 md:order-1">
-                <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group">
+                <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => openLightbox("https://res.cloudinary.com/hypertheory/image/upload/v1747510582/about4_od36co.avif")}>
                   <Image
                     src="https://res.cloudinary.com/hypertheory/image/upload/v1747510582/about4_od36co.avif"
                     alt="Captain Rich"
@@ -116,7 +123,7 @@ export default function About() {
             {/* Captain John */}
             <div className="flex flex-col md:flex-row gap-6 items-center">
               <div className="w-full md:w-1/3 order-2 md:order-1">
-                <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group">
+                <div className="aspect-square relative rounded-xl overflow-hidden shadow-lg group cursor-pointer" onClick={() => openLightbox("https://res.cloudinary.com/hypertheory/image/upload/v1747510581/about5_hvg4u6.avif")}>
                   <Image
                     src="https://res.cloudinary.com/hypertheory/image/upload/v1747510581/about5_hvg4u6.avif"
                     alt="Captain John"
@@ -147,6 +154,12 @@ export default function About() {
           </div>
         </div>
       </div>
+
+      {/* Use our reusable ImageLightbox component */}
+      <ImageLightbox 
+        selectedImage={selectedImage} 
+        onClose={closeLightbox} 
+      />
     </PageLayout>
   );
 } 
